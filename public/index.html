@@ -33,27 +33,30 @@
       <button id="guessnav">Guess the result</button>
     </nav>
 
+    <!-- home page -->
     <div id="home">
       <h1>Welcome to the Coin Flipping Game!</h1>
       <p>There are several modes: flip one coin, flip multiple coins, or guess the result of a coin flip.</p>
       <p>Click the button for the mode you'd like!</p>
     </div>    
-
+     
+    <!-- single coin flip -->
     <div id="single" class="hidden">
       
       <button id="coin">Flip single coin?</button>
       <p id="active"></p>
       <!-- A result paragraph-->
-      <p>Result: <span id="result"></span></p>
+      <p>Result: <span id="single_res"></span></p>
       <!-- An image of a US quarter (North Carolina variant) -->
       <img src="./assets/img/coin.png" id="coin">
     </div>
 
+    <!-- many coin flip-->
     <div id="multi" class="hidden">
-      <h1>Flip many coins</h1>
+      <h1>Flip many coins?</h1>
 			<form id="coins">
 				<label for="number">
-					<strong>How many coins?</strong>
+					<strong>How many coins to flip?</strong>
 				</label>
 				<input type="number" name="number" id="number">
 				<input type="submit" value="Flip 'em!">
@@ -62,10 +65,23 @@
 			<h2>Results</h2>
 				<p id="heads"></p>
 				<p id="tails"></p>
+        <p id=tbl></p>
     </div>
+
+    <!-- guess result of flipped coin -->
     <div id="guess" class="hidden">
-      
+      <h1>Guess result of coin flip?</h1>
+      <button id="guessHeads">Heads</button>
+      <button id="guessTails">Tails</button>
+
+      <h2>What you guessed: <span id="theguess"></span></h2>
+      <img class="smallcoinimg" src="/assets/img/coin.png" id="guessedcoin">
+      <h2>Result of Flip: <span id="flipped"></span></h2>
+      <img class="smallcoinimg" src="/assets/img/coin.png" id="flippedcoin">
+      <h2>Win or Lose?: <span id="guessflipres"></span></h2>
     </div>
+
+    <!-- link to js file -->
 	<script src="main.js"></script>
   </body>
 </html>
